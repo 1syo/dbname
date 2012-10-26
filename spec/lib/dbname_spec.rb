@@ -16,11 +16,11 @@ describe Dbname do
   describe ".branch_name" do
     subject { Dbname.branch_name }
     context "current directory is git repository" do
-      before { Grit::Head.any_instance.stub(:name) { nil } }
+      before { Grit::Repo.stub_chain(:new, :head, :name) { nil } }
       it { should be_nil }
     end
     context "current directory is not git repository" do
-      before { Grit::Head.any_instance.stub(:name) { "gems" } }
+      before { Grit::Repo.stub_chain(:new, :head, :name) { "gems" } }
       it { should eq "gems" }
     end
   end
