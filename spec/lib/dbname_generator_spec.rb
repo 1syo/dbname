@@ -12,17 +12,17 @@ describe DbnameGenerator do
   describe ".generate" do
     subject { DbnameGenerator.generate[:development] }
     context "current directory is git repository" do
-      before { DbnameGenerator.stub(:repository) { nil } }
+      before { DbnameGenerator.stub(:branch_name) { nil } }
       it { should eq "object_development" }
     end
     context "current directory is not git repository" do
-      before { DbnameGenerator.stub(:repository) { "gems" } }
+      before { DbnameGenerator.stub(:branch_name) { "gems" } }
       it { should eq "object_development_gems" }
     end
   end
 
-  describe ".repository" do
-    subject { DbnameGenerator.repository }
+  describe ".branch_name" do
+    subject { DbnameGenerator.branch_name }
     context "current directory is git repository" do
       before { Grit::Head.any_instance.stub(:name) { nil } }
       it { should be_nil }
@@ -33,8 +33,8 @@ describe DbnameGenerator do
     end
   end
 
-  describe ".project" do
-    subject { DbnameGenerator.project }
+  describe ".project_name" do
+    subject { DbnameGenerator.project_name }
     it { should eq "object" }
   end
 end

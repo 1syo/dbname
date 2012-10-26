@@ -7,14 +7,14 @@ module DbnameGenerator
   extend self
 
   def generate
-    lambda{|environment| [project, environment, repository].compact.join('_') }
+    lambda{|environment| [project_name, environment, branch_name].compact.join('_') }
   end
 
-  def repository
+  def branch_name
     Grit::Repo.new(".").head.name rescue nil
   end
 
-  def project
+  def project_name
     Rails.application.class.parent.to_s.downcase
   end
 end
