@@ -8,9 +8,9 @@ Gem::Specification.new do |gem|
   gem.version       = DbnameGenerator::VERSION
   gem.authors       = ["TAKAHASHI Kazunari"]
   gem.email         = ["takahashi@1syo.net"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{ dbname_generator generate dbname from application name, Rails.env, and git branche name. }
+  gem.summary       = %q{ dbname_generator generate dbname from application name, Rails.env, and git branche name. }
+  gem.homepage      = "https://github.com/1syo/dbname_generator"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
