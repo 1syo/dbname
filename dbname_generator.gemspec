@@ -20,7 +20,9 @@ Gem::Specification.new do |gem|
   gem.licenses = ['MIT']
 
   gem.add_dependency 'grit', ['>= 2.4.0']
+  gem.add_dependency 'rails', ['>= 3.0.0']
 
+  gem.add_development_dependency 'pry', ['>= 0']
   gem.add_development_dependency 'rake', ['>= 0']
   gem.add_development_dependency 'rdoc', ['>= 0']
   gem.add_development_dependency 'rspec', ['>= 0']
