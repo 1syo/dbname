@@ -1,6 +1,6 @@
 # DbnameGenerator
 
-dbname_generator generate dbname from application name, Rails.env, and git branche name.
+generates string from application name, Rails.env or current branch name, for use as the database name.
 
 ## Installation
 
