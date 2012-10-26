@@ -1,15 +1,15 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'dbname_generator/version'
+require 'dbname/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "dbname_generator"
-  gem.version       = DbnameGenerator::VERSION
+  gem.name          = "dbname"
+  gem.version       = Dbname::VERSION
   gem.authors       = ["TAKAHASHI Kazunari"]
   gem.email         = ["takahashi@1syo.net"]
-  gem.description   = %q{ dbname_generator generate dbname from application name, Rails.env, and git branche name. }
-  gem.summary       = %q{ dbname_generator generate dbname from application name, Rails.env, and git branche name. }
+  gem.description   = %q{ dbname generate dbname from application name, Rails.env, and git branche name. }
+  gem.summary       = %q{ dbname generate dbname from application name, Rails.env, and git branche name. }
   gem.homepage      = "https://github.com/1syo/dbname_generator"
 
   gem.files         = `git ls-files`.split($/)

@@ -1,12 +1,11 @@
 require 'grit'
 require "rails"
-require "dbname_generator/version"
-require "dbname_generator/railtie"
+require "dbname/version"
 
-module DbnameGenerator
+module Dbname
   extend self
 
-  def generate
+  def env
     lambda{|environment| [project_name, environment, branch_name].compact.join('_') }
   end
 
