@@ -1,5 +1,7 @@
 # Dbname
 
+[![Build Status](https://secure.travis-ci.org/1syo/dbname.png)](http://travis-ci.org/1syo/dbname)
+
 generates string from application name, env[:symbol] or current branch name, for use as the database name.
 
 ## Installation
