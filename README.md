@@ -1,12 +1,12 @@
-# DbnameGenerator
+# Dbname
 
-generates string from application name, Rails.env or current branch name, for use as the database name.
+generates string from application name, env[:symbol] or current branch name, for use as the database name.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'dbname_generator', git: "git://github.com/1syo/dbname_generator.git"
+    gem 'dbname', git: "git://github.com/1syo/dbname.git"
 
 And then execute:
 
@@ -27,11 +27,11 @@ Write your config/database.yml
 
     development: &development
       <<: *defaults
-      database: <%= Rails.dbname[:development] %>
+      database: <%= Dbname.env[:development] %>
 
     test:
       <<: *defaults
-      database: <%= Rails.dbname[:test] %>
+      database: <%= Dbname.env[:test] %>
 
 ## Contributing
 
