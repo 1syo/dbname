@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Dbname::VERSION
   gem.authors       = ["TAKAHASHI Kazunari"]
   gem.email         = ["takahashi@1syo.net"]
-  gem.description   = %q{ dbname generate dbname from application name, Rails.env, and git branche name. }
-  gem.summary       = %q{ dbname generate dbname from application name, Rails.env, and git branche name. }
+  gem.description   = %q{ generates string from application name, Rails.env or current branch name, for use as the database name. }
+  gem.summary   = %q{ generates string from application name, Rails.env or current branch name, for use as the database name. }
   gem.homepage      = "https://github.com/1syo/dbname_generator"
 
   gem.files         = `git ls-files`.split($/)
